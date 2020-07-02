@@ -6,10 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthService } from './auth.service';  //32.a
 import { AuthGuardService } from './auth-guard.service'; //32.b
+import { AuthComponent } from './auth/auth.component'; //35
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +23,7 @@ import { AuthGuardService } from './auth-guard.service'; //32.b
 })
 export class AppModule { }
 /*
-  32.d => imports[2]
-  32.e => providers[0] y providers[1]
+  32.d  => imports[2]
+  32.e  => providers[0] y providers[1]
+  35    => declarations[1]
 */
