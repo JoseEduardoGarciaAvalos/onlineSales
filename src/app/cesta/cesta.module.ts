@@ -10,6 +10,7 @@ import { CestaComponent } from './cesta.component';
   imports: [
     CommonModule,
     CestaRoutingModule
-  ]
+  ],
+  exports: [CestaComponent]
 })
 export class CestaModule { }
