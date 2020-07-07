@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { BusquedaRoutingModule } from './busqueda-routing.module';
 import { BusquedaComponent } from './busqueda.component';
+import { ParImparPipe } from './par-impar.pipe';
 
 
 @NgModule({
-  declarations: [BusquedaComponent],
+  declarations: [BusquedaComponent, ParImparPipe],
   imports: [
     CommonModule,
     BusquedaRoutingModule
