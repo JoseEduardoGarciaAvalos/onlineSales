@@ -1,1 +1,19 @@
-<p>producto-criterio works!</p>
+Criterios de búsqueda:
+<br/>
+<table>
+  <tr>
+    <td>
+      <select *ngFor="let selector of selectores" (change)="seleccion($event, selector.nombre)">
+        <option id="{{selector.nombre}}">{{selector.name}}</option>
+        <option *ngFor="let valor of selector.valores">{{valor}}</option>
+      </select>
+    </td>
+    <td>
+      &rarr;
+    </td>
+    <td>
+      <!--a [routerLink]="['/busqueda', {outlets: {'listaBusqueda': ['keywords', this.parametros.tipo, this.parametros.marca, this.parametros.minprecio, this.parametros.maxprecio, this.parametros.minpopularidad]}}]"> Selección de productos </a-->
+      <button (click)="productoSeleccion()"> Selección de productos </button>
+    </td>
+  </tr>
+</table>
