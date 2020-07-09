@@ -9,10 +9,11 @@ import { ParImparPipe } from './par-impar.pipe';
 import { OrdenarPipe } from './ordenar.pipe';
 import { ProductoKeywordComponent } from './producto-keyword/producto-keyword.component';
 import { ProductoCriterioComponent } from './producto-criterio/producto-criterio.component';
+import { ProductoListaComponent } from './producto-lista/producto-lista.component';
 
 
 @NgModule({
-  declarations: [BusquedaComponent, ParImparPipe, OrdenarPipe, ProductoKeywordComponent, ProductoCriterioComponent],
+  declarations: [BusquedaComponent, ParImparPipe, OrdenarPipe, ProductoKeywordComponent, ProductoCriterioComponent, ProductoListaComponent],
   imports: [
     CommonModule,
     BusquedaRoutingModule
