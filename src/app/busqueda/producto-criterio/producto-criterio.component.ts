@@ -9,7 +9,7 @@ import { BusquedaService } from "../busqueda.service";
 })
 export class ProductoCriterioComponent implements OnInit {
   public selectores: Object[] = [];  // --aot
-  private parametros: any = { "tipo": "*", "marca": "*", "minprecio": "*", "maxprrecio": "*", "minpopularidad": "*" };
+  private parametros: any = { "tipo": "*", "marca": "*", "minprecio": "*", "maxprecio": "*", "popularidad": "*" };
 
   constructor(private router: Router, private busquedaService: BusquedaService) { }
 
@@ -33,7 +33,7 @@ export class ProductoCriterioComponent implements OnInit {
       etiqueta.style.backgroundColor = "#F5F3F3";
     }
     else {
-      if (selector == "price") {
+      if (selector == "precio") {
         let precio = /(.+) - (.+)/.exec(texto);
         this.parametros["minprecio"] = precio[1];
         this.parametros["maxprecio"] = precio[2];
@@ -53,7 +53,7 @@ export class ProductoCriterioComponent implements OnInit {
           this.parametros.marca,
           this.parametros.minprecio,
           this.parametros.maxprecio,
-          this.parametros.minpopularidad
+          this.parametros.popularidad
         ]
       }
     }]);

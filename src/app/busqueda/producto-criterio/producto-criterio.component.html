@@ -4,7 +4,7 @@ Criterios de búsqueda:
   <tr>
     <td>
       <select *ngFor="let selector of selectores" (change)="seleccion($event, selector.nombre)">
-        <option id="{{selector.nombre}}">{{selector.name}}</option>
+        <option id="{{selector.nombre}}">{{selector.nombre}}</option>
         <option *ngFor="let valor of selector.valores">{{valor}}</option>
       </select>
     </td>
