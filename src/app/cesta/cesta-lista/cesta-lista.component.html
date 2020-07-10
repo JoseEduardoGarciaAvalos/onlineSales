@@ -1,1 +1,12 @@
-<p>cesta-lista works!</p>
+<ul>
+    <li *ngFor="let producto of productos">
+        {{producto.nombre}} ({{producto.marca}}) : {{producto.nb}} &#160; 
+        <button (click)="insertarCestaProducto(producto._id)"> + </button> 
+        <button (click)="removerCestaProducto(producto._id)"> - </button> 
+    </li>
+ </ul>
+ <span id="total"> Total = {{total}} </span>
+ <br/><br/>
+ <button (click)="cestaValidacion()"> Validación </button>
+ <button (click)="cestaReset()"> Reinicialización / Reset </button> 
+ 
