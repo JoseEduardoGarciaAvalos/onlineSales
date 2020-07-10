@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CestaRoutingModule } from './cesta-routing.module';
 import { CestaComponent } from './cesta.component';
+import { CestaService } from "./cesta.service";
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { CestaComponent } from './cesta.component';
     CommonModule,
     CestaRoutingModule
   ],
-  exports: [CestaComponent]
+  exports: [CestaComponent],
+  providers: [CestaService]
 })
 export class CestaModule { }
