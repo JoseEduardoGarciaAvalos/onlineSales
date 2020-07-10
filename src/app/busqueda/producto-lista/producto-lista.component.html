@@ -1,1 +1,37 @@
-<p>producto-lista works!</p>
+<p>
+    Lista de los productos seleccionados:
+  </p>
+  
+  <table>
+     <tr>
+       <td>
+         <ul>
+       <li *ngFor="let producto of (productos | parImpar:'impar')">
+            <label *ngIf="producto.stock > 0" class="red"> 
+                <a [routerLink]="['/cesta', {outlets:{'listaCesta': ['gestion', 'insertar', producto._id, 0]}}]">
+                     {{producto.nombre}} </a>, </label>
+            <label *ngIf="producto.stock == 0">  {{producto.nombre}} (no disponible), </label>	       
+                   Marca: {{producto.marca}},
+                   Precio: {{producto.precio}},
+                   <!-- _id: {{producto._id}} -->	      
+       </li>
+         </ul>
+       </td>
+       <td>
+         <ul>
+       <li *ngFor="let producto of (productos | parImpar:'par')">
+            <label *ngIf="producto.stock > 0" class="red"> 
+                <a [routerLink]="['/cesta', {outlets:{'listaCesta': ['gestion', 'insertar', producto._id, 0]}}]"> 
+                    {{producto.nombre}} </a>, </label>
+            <label *ngIf="producto.stock == 0">  {{producto.nombre}} (no disponible), </label>	       
+                   Marca: {{producto.marca}},
+                   Precio: {{producto.precio}},
+                   <!-- _id: {{product._id}} -->
+           </li>
+         </ul>
+       </td>
+     </tr>
+  </table>
+    
+  
+  
