@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { CestaRoutingModule } from './cesta-routing.module';
 import { CestaComponent } from './cesta.component';
 import { CestaService } from "./cesta.service";
+import { CestaValidacionComponent } from './cesta-validacion/cesta-validacion.component';
 
 
 @NgModule({
-  declarations: [CestaComponent],
+  declarations: [CestaComponent, CestaValidacionComponent],
   imports: [
     CommonModule,
     CestaRoutingModule
