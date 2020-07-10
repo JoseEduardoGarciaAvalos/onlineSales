@@ -1,1 +1,10 @@
-<p>cesta works!</p>
+<div id="cesta" *ngIf="authService.isLogin">
+    <p>
+        <button (click)="mostrarCesta()">
+            Cesta de {{this.authService.cliente.nombre}} {{this.authService.cliente.apellido}}
+        </button>
+    </p>
+    <router-outlet name="listaCesta"></router-outlet>
+    <router-outlet name="gestionCesta"></router-outlet>
+    <router-outlet name="validacionCesta"></router-outlet>
+</div>

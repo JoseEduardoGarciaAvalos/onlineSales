@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-cesta',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CestaComponent implements OnInit {
 
-  constructor() { }
+  constructor( 
+    public authService :AuthService,  // --aot
+    private router :Router 
+  ) {}
 
   ngOnInit() {
   }
+
+  mostrarCesta() {
+    this.router.navigate(['/cesta', {outlets:{'listaCesta': ['lista', 0]}}]);
+ }
 
 }
