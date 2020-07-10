@@ -5,10 +5,11 @@ import { CestaRoutingModule } from './cesta-routing.module';
 import { CestaComponent } from './cesta.component';
 import { CestaService } from "./cesta.service";
 import { CestaValidacionComponent } from './cesta-validacion/cesta-validacion.component';
+import { CestaGestionComponent } from './cesta-gestion/cesta-gestion.component';
 
 
 @NgModule({
-  declarations: [CestaComponent, CestaValidacionComponent],
+  declarations: [CestaComponent, CestaValidacionComponent, CestaGestionComponent],
   imports: [
     CommonModule,
     CestaRoutingModule
