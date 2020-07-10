@@ -16,7 +16,7 @@ export class ProductoListaComponent implements OnInit {
     this.route.params.subscribe((parametros :Params) => {
          let ruta = "";
          if (parametros["tipo"] !== undefined) {
-             ruta = "criterio/"+parametros['tipo']+"/"+parametros['marca']+"/"+parametros['minprecrio']+"/"+parametros['maxprecio']+"/"+parametros['minpopularidad'];
+             ruta = "criterio/"+parametros['tipo']+"/"+parametros['marca']+"/"+parametros['minprecio']+"/"+parametros['maxprecio']+"/"+parametros['minpopularidad'];
          }
          else {
              ruta = "keywords?"+parametros["terminos"].split(" ").join("&");
