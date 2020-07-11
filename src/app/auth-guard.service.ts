@@ -13,7 +13,7 @@ export class AuthGuardService implements CanActivate{
    //29.d
   canActivate(): boolean{
     if(this.authService.isLogin) return true;
-    this.router.navigate([{outlets: {'login': ['login']}}]);
+    //this.router.navigate([{outlets: {'login': ['login']}}]);
     return false;
   }
 }
